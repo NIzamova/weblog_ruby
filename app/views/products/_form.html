@@ -1,0 +1,11 @@
+<%#= form_tag products_path do %>
+  <%#= text_field_tag ‘product[name]’ %>
+  <%#= submit_tag ‘Create’ %>
+<%# end %>
+
+<%= form_for :product, url: products_path do |f| %>
+  <%= f.text_field :name %>
+  <%= f.number_field :count, min: 0 %>
+  <%= f.number_field :price, min: 0, step: 0.01 %>
+  <%= f.submit "Create" %>
+<% end %>

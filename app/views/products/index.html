@@ -1,0 +1,16 @@
+<h1> Product list </h1>
+
+<% unless @products.empty? %>
+  <ul>
+    <% @products.each do |product| %>
+      <li>
+        <div>
+        <%= link_to product.name , product_path(product) %>
+          
+        </div>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= link_to "New product", new_product_path %>

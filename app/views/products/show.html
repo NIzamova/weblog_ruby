@@ -1,0 +1,12 @@
+<%= @product.name %>: 
+
+<h2>Product: <%=@product.name%> </h2>
+<div>
+	<label> Price: </label>
+	<%= number_to_currency(@product.price, precision: 2) %> 
+</div>
+
+<div>
+	<label> Count: </label>
+	<%= @product.count %>
+</div>
